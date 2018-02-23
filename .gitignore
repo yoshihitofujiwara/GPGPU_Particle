@@ -1,0 +1,43 @@
+# SASS #
+.sass-cache/
+*.css.map
+
+# Node #
+node_modules/
+
+# Backup #
+_bk/
+
+# Editer
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+*.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# OSX #
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+
+# Thumbnails
+._*
+
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
