@@ -41,12 +41,12 @@ class GPGPUParticles {
     // GPUレンダラー生成
     this.gpuCompute = new GPUComputationRenderer(this.params.txSize, this.params.txSize, this.render.renderer);
 
-    // 
+    // 座標と加速度のテクスチャ変数格納用オブジェクト
     this.velocityVar = null;
     this.positionVar = null;
 
+    // 描画用uniforms変数格納用オブジェクト
     this.uniforms = {};
-
 
     // init call
     this.setup();
