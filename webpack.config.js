@@ -53,7 +53,7 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      compress: { drop_console: true }
+      // compress: { drop_console: true }
     }),
     new webpack.optimize.AggressiveMergingPlugin(),
   ]

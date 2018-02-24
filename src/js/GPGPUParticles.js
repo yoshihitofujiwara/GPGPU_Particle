@@ -42,8 +42,8 @@ class GPGPUParticles {
     this.gpuCompute = new GPUComputationRenderer(this.params.txSize, this.params.txSize, this.render.renderer);
 
     // 座標と加速度のテクスチャ変数格納用オブジェクト
-    this.velocityVar = null;
     this.positionVar = null;
+    this.velocityVar = null;
 
     // 描画用uniforms変数格納用オブジェクト
     this.uniforms = {};
@@ -152,7 +152,7 @@ class GPGPUParticles {
     // パーティクルポジション座標情報(*xyz)格納用Float32Array生成
     let positions = new Float32Array(this.params.particles * 3);
 
-    // パーティクルuv座標格納用Float32Array生成(テクスチャから座標取得する時に使用) 
+    // パーティクルuv座標格納用(*xy)Float32Array生成(テクスチャから座標取得する時に使用) 
     let uvs = new Float32Array(this.params.particles * 2);
 
     let div = this.params.txSize - 1,
@@ -186,9 +186,10 @@ class GPGPUParticles {
       fragmentShader: require("../shader/defaults.frag")
     });
 
-    let points = new THREE.Points(geometry, material);
 
     this.render.scene.remove(this.render.scene.children[0]);
+
+    let points = new THREE.Points(geometry, material);
     this.render.scene.add(points);
   }
 
