@@ -67,7 +67,7 @@ class GPGPUParticles {
       // this.velocityVar.material.uniforms.velocity.value *= 0.95;
       // }
 
-      // GPU計算処理
+      // コンピュートシェーダー
       this.gpuCompute.compute();
 
       // GPU計算処理結果をuniforms変数に渡す
@@ -152,7 +152,7 @@ class GPGPUParticles {
     // パーティクルポジション座標情報(*xyz)格納用Float32Array生成
     let positions = new Float32Array(this.params.particles * 3);
 
-    // パーティクルuv座標格納用(*xy)Float32Array生成(テクスチャから座標取得する時に使用) 
+    // パーティクルuv座標格納用(*xy)Float32Array生成(テクスチャから座標取得する時に使用)
     let uvs = new Float32Array(this.params.particles * 2);
 
     let div = this.params.txSize - 1,
